@@ -9,11 +9,117 @@
 <div>
   <p id="display1"> Hello
 </div>
-</body>
-<script>
+<hr>
+<pre>//Start Function
+  /*
   function start(){
     htmlString = '<p> Start of Data';
     document.getElementById('display1').innerHTML = htmlString;
   }
+
+   */
+
+  //Concatenate functions
+  let x = "Hello";
+  let y = "World";
+  let z1 = x+" "+y;
+  let z2 = x+9;
+  let z3 = 3+9;
+  htmlString = '<p>1a. Concat ' + z1;
+  htmlString+= '<p>1b. Concat ' + z2;
+  htmlString+= '<p>1c. Concat ' + z3;
+
+  //Showing constants and arrays
+  const PI = 3.141592653589793;
+  htmlString += '<p> 2. Constant '+PI;
+  buildings = ['Hancock', 'LT','Donnely', 'Byrne'];
+  htmlString += '<p> 3a. Arrays [] ' +buildings[1];
+  htmlString += '<p> 3b. Arrays .length ' + buildings.length;
+
+  //Search ideas
+  searchbuild = 'Hancock'
+  if(buildings.includes(searchbuild)) {
+      htmlString+='<p> 4a. Does include ' + searchbuild;
+  }
+  else {
+      htmlString+='<p> 4b. Does not include ' + searchbuild;
+  }
+
+  //5
+  let s1 = "This has an out strings with an inner'";
+  let s2 = 'This has an out strings with an inner"';
+  htmlString += '<p> 5a. ' + s1;
+  htmlString += '<p> 5b. ' + s2;
+
+  //Drop down menu
+  htmlString += '<p>6. Select: <select id="building-select">';
+
+  buildings.forEach((building) => {
+      htmlString += '<option value="' + building + '">' + building + '</option>';
+  });
+
+  htmlString += '</select></p>';
+
+  document.getElementById('display1').innerHTML = htmlString;</pre>
+</body>
+<script>
+  //Start Function
+  /*
+  function start(){
+    htmlString = '<p> Start of Data';
+    document.getElementById('display1').innerHTML = htmlString;
+  }
+
+   */
+
+  //Concatenate functions
+  let x = "Hello";
+  let y = "World";
+  let z1 = x+" "+y;
+  let z2 = x+9;
+  let z3 = 3+9;
+  htmlString = '<p>1a. Concat ' + z1;
+  htmlString+= '<p>1b. Concat ' + z2;
+  htmlString+= '<p>1c. Concat ' + z3;
+
+  //Showing constants and arrays
+  const PI = 3.141592653589793;
+  htmlString += '<p> 2. Constant '+PI;
+  buildings = ['Hancock', 'LT','Donnely', 'Byrne'];
+  htmlString += '<p> 3a. Arrays [] ' +buildings[1];
+  htmlString += '<p> 3b. Arrays .length ' + buildings.length;
+
+  //Search ideas
+  searchbuild = 'Hancock'
+  if(buildings.includes(searchbuild)) {
+      htmlString+='<p> 4a. Does include ' + searchbuild;
+  }
+  else {
+      htmlString+='<p> 4b. Does not include ' + searchbuild;
+  }
+
+  //5
+  let s1 = "This has an out strings with an inner'";
+  let s2 = 'This has an out strings with an inner"';
+  htmlString += '<p> 5a. ' + s1;
+  htmlString += '<p> 5b. ' + s2;
+
+  //Drop down menu
+  htmlString += '<p>6. Select: <select id="building-select">';
+
+  buildings.forEach((building) => {
+      htmlString += '<option value="' + building + '">' + building + '</option>';
+  });
+
+  htmlString += '</select></p>';
+
+  //7
+  htmlString+= '<p> 7.';
+
+  //8
+  htmlString+= '<p> 8.';
+
+
+  document.getElementById('display1').innerHTML = htmlString;
 </script>
 </html>
