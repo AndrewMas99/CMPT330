@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Class 5</title>
+  <style>
+    body {background-color: #bb4814;color: white;}
+    h2 {color: white;}
+    body{background-color: brown; color: white;}
+    .veryImportant{font-size:40px; text-decoration: underline;}
+    #group1{font-style: italic;}
+    .floatRight{float: right;width:50%; border: 4px solid black; padding: 5px 5px 5px 5px; margin: 5px 5px 5px 5px;}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Class 5</h1>
+</header>
+<div id="group1">
+<div id="div1">
+  <h2 class="veryImportant">Attention</h2>
+  <ul>
+    <li>Should be adjusted to what a potential user needs.</li>
+    <li>Consider the user knows what they want or if they need suggesting.</li>
+    <li>The information should be present, so it is easy for a user to identify what they need when they find it.</li>
+  </ul>
+</div>
+
+<div id="div2">
+  <h2 class="veryImportant">Perception</h2>
+  <ul>
+    <li>Refers to how information is acquired.</li>
+    <li>Should not make it so that distractions are unintended through things like colors.</li>
+  </ul>
+</div>
+
+<div id="div3">
+  <h2 class="veryImportant">Memory</h2>
+  <ul>
+    <li>Products should be designed for recognition.</li>
+    <li>Use chunking and categorization to aid recall.</li>
+    <li>Provide consistency in things like navigation, menus, options, format.</li>
+  </ul>
+</div>
+</div>
+
+<br style="clear: right;">
+
+<div id="div4">
+  <h2 class="veryImportant">Learning</h2>
+  <ul>
+    <li>Design for comprehension, readability, and durability.</li>
+  </ul>
+</div>
+
+<div id="div5">
+  <h2 class="veryImportant">Reading</h2>
+  <ul>
+    <li>Information that may want to be recalled should be in written form.</li>
+    <li>Audio should consider accessibility. </li>
+    <li>Speech recognition can allow for additional accessibility or potential increase in efficiency.</li>
+  </ul>
+</div>
+
+<div id="div6">
+  <h2 class="veryImportant">Problem-Solving</h2>
+  <ul>
+    <li>Design for all types of users expertise.</li>
+    <li>Ethical responsibilities in making sure users are not improperly swayed into decisions.</li>
+    <li>Feedback should be welcomed when designing.</li>
+  </ul>
+</div>
+
+<footer>
+  <hr>
+  <p><small>&#169;Andrew J Masone 2/16/2023</small>
+    <br>
+    <a href="mailto:andrew.masone1@marist.edu">andrew.masone1@marist.edu</a>
+  </p>
+</footer>
+
+<button onclick="changeBackground()">Change Background Color</button>
+
+<script>
+  function changeBackground() {
+    var divs = document.getElementsByTagName("div");
+    for (var i = 0; i < 6; i++) {
+      divs[i].style.backgroundColor = "black";
+    }
+  }
+</script>
+</body>
+</html>

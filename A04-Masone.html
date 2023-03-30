@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<style>
+    html{
+        background-color:#2c2f33;
+        color:White;
+    }
+</style>
+<html>
+<head>
+    <title>A04-Masone.HTML</title>
+</head>
+<h1><strong> A05</strong></h1>
+<body>
+<ol>
+    <li> What are the five key issues we need to focus on when gathering data? Provide an explanatory sentence for each.</li>
+    <br>
+    <li> What are the six data techniques (in section 8.7) - would you use them for your project app?</li>
+    <br>
+    <li> What is the format (syntax) of a user story?</li>
+    <br>
+    <li> What are the five types of requirements, and list at least one of each type.</li>
+    <br>
+    <li> What are the seven product dimensions?</li>
+    <br>
+    <li> Compare and contrast persona and scenario.</li>
+</ol>
+<br>
+<main>
+    <p id="answer">Select a question to see its answer.</p>
+    <button id="button1">Question 1</button>
+    <button id="button2">Question 2</button>
+    <button id="button3">Question 3</button>
+    <button id="button4">Question 4</button>
+    <button id="button5">Question 5</button>
+    <button id="button6">Question 6</button>
+</main>
+<style>
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color:#2c2f33;
+        color: red;
+    }
+</style>
+<footer>
+    <hr>
+    <p><small>&#169;Andrew J Masone 2/1/2023</small>
+        <br>
+        <a href="mailto:andrew.masone1@marist.edu">andrew.masone1@marist.edu</a>
+    </p>
+</footer>
+<script>
+    const btns = document.querySelectorAll("button");
+    const answer = document.querySelector("#answer");
+
+    btns[0].addEventListener("click", function() {
+        answer.innerHTML = "The five focus points of data gather are, " +
+            "         Quality-ensuring that the data is reliable and accurate.\n" +
+            "         Security-ensuring that a third party would be unable to access or change the data.\n" +
+            "         Privacy-respecting the privacy rights of users and making sure that information is shared without consent.\n" +
+            "         Volume-making sure that enough information is being stored and accessible.\n" +
+            "         Accessibility- making sure the data can be accessed by those allowed, and those that need to access it."
+	;
+    });
+
+    btns[1].addEventListener("click", function() {
+        answer.innerHTML =" Six data techniques are, "+
+            "Data collection-Gather data through user submissions or analysis."+
+            "Data cleaning-Removing improper data that may be inaccurate or unnecessary."+
+            "Data integration-Combing data with preexisting data so it can all be unified."+
+            "Data Transformation-Converting data so that it can be usable for a system."+
+            "Data reduction-Simplifying data to a more basic format"+
+            "Data visualizationPresenting the data in a visually appealing way that makes it easier to understand.";
+    });
+
+    btns[2].addEventListener("click", function() {
+        answer.innerHTML = "As a user, I have wants, so that I can gain a benefit. Example: As a moviegoer, I want to watch movies at home, so I spend less money and avoid the theatres.";
+    });
+    btns[3].addEventListener("click", function() {
+        answer.innerHTML = "Functional-What the product needs to accomplish."+
+            "Non-functional-The products ability to perform actions not for the user."+
+            "Business-How the product needs to act to gain income."+
+            "User-What the users need from the product itself."+
+            "Technical-Define what infrastructure the technology will need.";
+    });
+    btns[4].addEventListener("click", function() {
+        answer.innerHTML = "The seven dimensions are: Features, Performance, Usability, Reliability, Security, Support, and Cost.";
+    });
+    btns[5].addEventListener("click", function() {
+        answer.innerHTML = "A persona is a pretend user that is based off of what the typical user would act and be like, in a way to make it easier to build a product for such user. A scenario does not have a specific user in mind and is a situation where the product will be attempted to be used and what needs it would fulfill.";
+    });
+</script>

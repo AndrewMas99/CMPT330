@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<style>
+    html{
+        background-color:#2c2f33;
+        color:White;
+    }
+</style>
+<html>
+<head>
+    <title>Six Processes of Cognition</title>
+    <style>
+        #Attention {
+            background-color: red;
+        }
+        #Perception {
+            background-color: orange;
+        }
+        #Memory {
+            background-color: #ebff00;
+        }
+        #Learning {
+            background-color: green;
+        }
+        #Reading {
+            background-color: blue;
+        }
+        #Problem-Solving {
+            background-color: purple;
+        }
+        h2 {
+            color: white;
+        }
+        ul {
+            color: white;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Six Processes of Cognition</h1>
+</header>
+
+<div id="Attention">
+    <h2>Attention</h2>
+    <ul>
+        <li>Should be adjusted to what a potential user needs.</li>
+        <li>Consider the user knows what they want or if they need suggesting.</li>
+        <li>The information should be present, so it is easy for a user to identify what they need when they find it.</li>
+    </ul>
+</div>
+
+<div id="Perception">
+    <h2>Perception</h2>
+    <ul>
+        <li>Refers to how information is acquired.</li>
+        <li>Should not make it so that distractions are unintended through things like colors.</li>
+    </ul>
+</div>
+
+<div id="Memory">
+    <h2>Memory</h2>
+    <ul>
+        <li>Products should be designed for recognition.</li>
+        <li>Use chunking and categorization to aid recall.</li>
+        <li>Provide consistency in things like navigation, menus, options, format.</li>
+    </ul>
+</div>
+
+<div id="Learning">
+    <h2>Learning</h2>
+    <ul>
+        <li>Design for comprehension, readability, and durability.</li>
+    </ul>
+</div>
+
+<div id="Reading">
+    <h2>Reading</h2>
+    <ul>
+        <li>Information that may want to be recalled should be in written form.</li>
+        <li>Audio should consider accessibility. </li>
+        <li>Speech recognition can allow for additional accessibility or potential increase in efficiency.</li>
+    </ul>
+</div>
+
+<div id="Problem-Solving">
+    <h2>Problem-Solving</h2>
+    <ul>
+        <li>Design for all types of users expertise.</li>
+        <li>Ethical responsibilities in making sure users are not improperly swayed into decisions.</li>
+        <li>Feedback should be welcomed when designing.</li>
+    </ul>
+</div>
+
+<style>
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color:#2c2f33;
+        color: red;
+    }
+</style>
+<footer>
+    <hr>
+    <p><small>&#169;Andrew J Masone 2/16/2023</small>
+        <br>
+        <a href="mailto:andrew.masone1@marist.edu">andrew.masone1@marist.edu</a>
+    </p>
+</footer>
+
+<button onclick="changeBackground()">Change Background Color</button>
+
+<script>
+    function changeBackground() {
+        var divs = document.getElementsByTagName("div");
+        for (var i = 0; i < 6; i++) {
+            divs[i].style.backgroundColor = "black";
+        }
+    }
+</script>

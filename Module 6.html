@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<style>
+    html{background-color: tan}
+    div {float: left; width: 30%; border: solid black; border-width: 2px; padding: 5px 5px 5px 5px;
+        margin: 10px 10px 10px 10px;}
+    .fullWidth {width: 100%;}
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1>DIVs and javascript</h1>
+<div id="div1" >
+    <p> This is the first division. </p>
+</div>
+<div id="div2"></div>
+<div id="div3" >
+    <img src="https://aptokash.github.io/Home/ZMarist_Logo.png" id="image1" width=100px height=100px alt="Image Not Found">
+</div>
+<div id="div4" >
+    <p> This is the fourth division. </p>
+</div>
+<div id="div5" >
+    <p> This is the fifth division. </p>
+</div>
+<div id="div6" >
+    <p>This is the sixth division. </p>
+</div>
+<p style="clear: left;"></p>
+<div id="buttons">
+    <input type=button onClick="button1()" id="button1" value="Set">
+    <input type=button onclick="button2()" id="button2" value="Picture">
+    <input type=button onclick="button3()" id="button3" value="Button 3">
+</div>
+</body>
+</body>
+<style>
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: red;
+    }
+</style>
+<footer>
+    <hr>
+    <p><small>&#169;Andrew J Masone 2/27/2023</small>
+        <br>
+        <a href="mailto:andrew.masone1@marist.edu">andrew.masone1@marist.edu</a>
+    </p>
+</footer>
+</html>
+<script>
+    globalAuthor = "Andrew Masone";
+
+    document.getElementById("div2").innerHTML = "<p style='color:blue;'>"+"<strong> Autoloaded text for second division</strong>";
+    function button1(){
+        button1 = document.getElementById("button1")
+        if(button1.value==="Set"){
+            button1.value="Unset";
+            button1.style.background='red';
+        }
+        else {
+            button1.value="Set";
+            button1.style.background='green';
+        }
+    }
+    function button2() {
+        var img = document.getElementById("image1");
+        img.src = "https://aptokash.github.io/Home/Zieee.jpg";
+    }
+    function button3(){
+
+    }
+
+</script>

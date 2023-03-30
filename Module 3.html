@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<style>
+  html{
+    background-color:#2c2f33;
+  }
+</style>
+<br>
+<h1>
+  &#10004; Input fields
+</h1>
+<ul>
+  <li><strong> Here is an input text box </strong>
+    <br> Enter first name <input type-"text" id="firstName">
+    <br> Enter last name <input type-"text" id="lastName"		value="Smith">
+    <br> Enter address <input type-"text" id="address"		autofocus>
+    <br> Enter zip code <input type-"text" id="zipcode"		maxength=5>
+    <br> Enter comments <input type-"text" id="comments"		size=5>
+  <li> Add functionality to add file from local pc</li>
+  <br>
+  <h2> &#10004; JavaScript </h2>
+  <p id="someText"></p>
+  <p><button onclick="doSomething()"> Our First Button</button>
+  <p> <button onclick="updateText()">Another Button </button>
+  <p><button onClick="changeLastName()">Change Last Name (not working)</button>
+
+  <footer>2/1/2023</footer>
+  <style>
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      background-color:#2c2f33;
+      color: red;
+    }
+  </style>
+  <footer>
+    <hr>
+    <p><small>&#169;Andrew J Masone 2/1/2023</small>
+      <br>
+      <a href="mailto:andrew.masone1@marist.edu">andrew.masone1@marist.edu</a>
+    </p>
+  </footer>
+
+
+  <script>
+    function doSomething() {
+      var element = document.getElementById("firstName");
+      firstName = element.value.trim();
+
+      if(firstName==""){
+        alert("please enter a first name");
+      }
+
+      else{
+        alert("Your first name is " + firstName + "!");}
+    }
+
+    function updateText(){
+      var someText = document.getElementById("someText");
+      someText.textContent = "We're writing this with JS!";
+    }
+
+    function changeLastName(){
+      var defaultLastName == "smith";
+      lastName.value=defaultLastName;
+    }
+  </script>
