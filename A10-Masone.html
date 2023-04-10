@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Picture Menu</title>
+  <style>
+    html{
+      padding-top: 200px;
+      background-color: #2c2f33;
+      background-image: url("A10-Masone Supplemental/Fridge");
+      background-size: 1920px 1080px;
+      background-repeat: no-repeat;
+      background-position: center px;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 1000px;
+      height: 500px;
+      margin: 0 auto;
+      overflow: hidden;
+      display: none;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column; /* set the direction to vertical */
+      overflow-x: hidden;
+      overflow-y: auto; /* enable vertical scrolling */
+      width: 1000px;
+      height: 500px; /* adjust height based on the number of pictures */
+      scroll-behavior: smooth;
+    }
+
+    .picture {
+      width: 1000px; /* make the picture width 100% of its container */
+      height: 500px; /* allow the picture height to adjust to maintain aspect ratio */
+      padding-bottom: 25px;
+    }
+
+    .button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: red;
+    }
+
+    .on .container {
+      display: block;
+    }
+
+    .on .button {
+      background-color: red;
+    }
+
+    .on body {
+      background-color: white;
+    }
+    </style>
+  </style>
+</head>
+<body>
+<div class="button-container">
+  <button class="button" onclick="toggleMenu()">OFF</button>
+</div>
+<div class="container">
+  <div class="menu">
+    <img src="A10-Masone Supplemental/500px-Spotify_logo_without_text.svg_-3520648632" alt="Spotify" class="picture">
+    <img src="A10-Masone Supplemental/weather" alt="Pic" class="picture">
+    <img src="A10-Masone Supplemental/Google.png" alt="Pic" class="picture">
+    <img src="A10-Masone Supplemental/AddNewApp" alt="Pic" class="picture">
+    <img src="A10-Masone Supplemental/Shopping%20List" alt="Pic" class="picture">
+  </div>
+</div>
+
+<script>
+  const soundOn = new Audio('A10-Masone Supplemental/On Sound.mp4');
+  const soundOff = new Audio('A10-Masone Supplemental/Off Sound.mp4');
+
+  function toggleMenu() {
+  var container = document.querySelector('.container');
+  var body = document.querySelector('body');
+  var button = document.querySelector('.button');
+
+  if (container.classList.contains('hidden')) {
+    soundOn.play();
+    container.classList.remove('hidden');
+    body.classList.add('on');
+    button.innerHTML = 'Turn Off';
+    button.style.backgroundColor = 'green';
+  } else {
+    soundOff.play();
+    container.classList.add('hidden');
+    body.classList.remove('on');
+    button.innerHTML = 'Turn On';
+    button.style.backgroundColor = 'red';
+  }
+}
+</script>
+
+</body>
+</html>
