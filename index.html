@@ -19,9 +19,11 @@
             const data = await response.json();
             let htmlString = "";
             for (let file of data) {
-                const fname = file.name;
-                const fpath = "https://AndrewMas99.github.io/CMPT330/" + fname;
-                htmlString += "<p><a href='" + fpath + "'>" + fname + "</a></p>";
+                if (file.type === "file") {
+                    const fname = file.name;
+                    const fpath = "https://AndrewMas99.github.io/CMPT330/" + fname;
+                    htmlString += "<p><a href='" + fpath + "'>" + fname + "</a></p>";
+                }
             }
             document.getElementById('files').innerHTML = htmlString;
         })();
