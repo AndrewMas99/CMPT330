@@ -18,13 +18,3 @@ footer
     height: 50px; /* Set the height of your footer */
     padding: 10px;
     }
-
-footerFinal
-    {
-    position: fixed;
-    bottom: 0;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    }
