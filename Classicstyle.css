@@ -1,8 +1,27 @@
-html, body{
+html, body
+    {
     background-color:#2c2f33;
     color: white;
     font-size: 24px;
-}
-a {
+    }
+
+a
+    {
     color: #5865F2;
-}
+    }
+
+footer
+    {
+    position: fixed;
+    bottom: 0;
+    }
+
+footerFinal
+    {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color:#2c2f33;
+    color: red;
+    }
