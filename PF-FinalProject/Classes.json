@@ -4,7 +4,7 @@
       "name": "Network Security Fundamentals",
       "instructor": "John Smith",
       "description": "This course covers the basics of network security, including encryption, firewalls, and intrusion detection systems.",
-      "credits": 3,
+      "credits": 4,
       "books": [
         {
           "title": "Hacking Exposed: Network Security Secrets & Solutions",
@@ -37,10 +37,10 @@
       ]
     },
     {
-      "name": "Cybercrime and Digital Forensics",
-      "instructor": "Bob Johnson",
-      "description": "This course examines the legal and technical aspects of cybercrime and teaches students how to gather and analyze digital evidence.",
-      "credits": 3,
+      "name": "Systems Design",
+      "instructor": "Andrew Tokash",
+      "description": "Systems Design Description, teaches students fundamentals of designing systems with a focus on web development.",
+      "credits": 4,
       "books": [
         {
           "title": "The Art of Deception: Controlling the Human Element of Security",

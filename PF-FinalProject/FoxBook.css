@@ -80,3 +80,16 @@ footer {
     background-color:#2c2f33;
     color: red;
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+

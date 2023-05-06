@@ -26,41 +26,54 @@
 
 <main>
     <section>
-        <h2>Welcome to Marist College</h2>
+        <h2>Class List</h2>
         <table>
             <thead>
             <tr>
-                <th>Class</th>
-                <th>Textbook</th>
+                <th>Name</th>
+                <th>Instructor</th>
+                <th>Description</th>
+                <th>Credits</th>
+                <th>Required Textbooks</th>
             </tr>
             </thead>
-            <tbody>
-            <!-- Use JavaScript to dynamically populate the table with data from the JSON file -->
+            <tbody id="courseTableBody">
             </tbody>
         </table>
+
         <script>
+            function displayBooks(books) {
+                let popup = window.open("", "popup", "width=400,height=400");
+                popup.document.write("<h2>Required Textbooks</h2>");
+                books.forEach(book => {
+                    popup.document.write(`<p>${book.title} by ${book.author} (ISBN: ${book.isbn})</p>`);
+                });
+                popup.document.close();
+            }
+
             fetch('Classes.json')
                 .then(response => response.json())
                 .then(data => {
-                    const tbody = document.querySelector('tbody');
-                    data.forEach(item => {
-                        const tr = document.createElement('tr');
-                        const classTd = document.createElement('td');
-                        const classLink = document.createElement('a');
-                        classLink.textContent = item.class;
-                        classLink.href = item.textbook.url;
-                        classLink.target = '_blank';
-                        classTd.appendChild(classLink);
-                        const textbookTd = document.createElement('td');
-                        textbookTd.textContent = item.textbook.title;
-                        tr.appendChild(classTd);
-                        tr.appendChild(textbookTd);
-                        tbody.appendChild(tr);
+                    let courseTableBody = document.getElementById('courseTableBody');
+
+                    data.classes.forEach(course => {
+                        let row = courseTableBody.insertRow();
+                        row.insertCell().innerText = course.name;
+                        row.insertCell().innerText = course.instructor;
+                        row.insertCell().innerText = course.description;
+                        row.insertCell().innerText = course.credits;
+                        let booksCell = row.insertCell();
+                        let booksLink = document.createElement("a");
+                        booksLink.href = "#";
+                        booksLink.innerText = "Required Textbooks";
+                        booksLink.onclick = () => displayBooks(course.books);
+                        booksCell.appendChild(booksLink);
                     });
                 });
         </script>
     </section>
 </main>
+
 
 <footer>
     <hr>
