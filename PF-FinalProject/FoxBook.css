@@ -4,8 +4,11 @@ body {
     margin: 0;
 }
 
-/* Header Styles */
+html{
+    background-color: lightgray;
+}
 
+/* Header Styles */
 header {
     padding: 2px;
     background-color: #ff0000;
@@ -89,7 +92,4 @@ td, th {
     padding: 8px;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
 
