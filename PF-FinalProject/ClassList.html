@@ -1,10 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="EN">
 <head>
+    <title>ClassList</title>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="FoxBook.css">
 </head>
 <body>
+<header>
+    <div class="header-container">
+        <h1>Marist College</h1>
+        <nav class="breadcrumb">
+            <a href="#">Home</a>
+            <span>></span>
+            <a href="#">About</a>
+            <span>></span>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+    <form action="#" method="get" class="search-form">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Go</button>
+    </form>
+</header>
 
+<main>
+    <section>
+        <h2>Welcome to Marist College</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Class</th>
+                <th>Textbook</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Use JavaScript to dynamically populate the table with data from the JSON file -->
+            </tbody>
+        </table>
+        <script>
+            fetch('Classes.json')
+                .then(response => response.json())
+                .then(data => {
+                    const tbody = document.querySelector('tbody');
+                    data.forEach(item => {
+                        const tr = document.createElement('tr');
+                        const classTd = document.createElement('td');
+                        const classLink = document.createElement('a');
+                        classLink.textContent = item.class;
+                        classLink.href = item.textbook.url;
+                        classLink.target = '_blank';
+                        classTd.appendChild(classLink);
+                        const textbookTd = document.createElement('td');
+                        textbookTd.textContent = item.textbook.title;
+                        tr.appendChild(classTd);
+                        tr.appendChild(textbookTd);
+                        tbody.appendChild(tr);
+                    });
+                });
+        </script>
+    </section>
+</main>
+
+<footer>
+    <hr>
+    <p><small>&#169;Andrew J Masone 5/6/2023</small>
+        <br>
+        <a href="mailto:andrew.masone1@marist.edu">andrew.masone1@marist.edu</a>
+    </p>
+</footer>
 </body>
 </html>
